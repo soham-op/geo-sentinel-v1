@@ -1,0 +1,9 @@
+-- Add all missing columns that the audit API returns
+ALTER TABLE audits ADD COLUMN IF NOT EXISTS full_address  TEXT;
+ALTER TABLE audits ADD COLUMN IF NOT EXISTS issues        JSONB;
+ALTER TABLE audits ADD COLUMN IF NOT EXISTS review_count  INTEGER;
+ALTER TABLE audits ADD COLUMN IF NOT EXISTS rating        NUMERIC(3,1);
+ALTER TABLE audits ADD COLUMN IF NOT EXISTS category      TEXT;
+ALTER TABLE audits ADD COLUMN IF NOT EXISTS phone         TEXT;
+ALTER TABLE audits ADD COLUMN IF NOT EXISTS has_website   BOOLEAN;
+ALTER TABLE audits ADD COLUMN IF NOT EXISTS whatsapp_number TEXT;
